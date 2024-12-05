@@ -1,8 +1,9 @@
 {
   "name": "nodejs---aula",
   "version": "1.0.0",
-  "description": "",
+  "description": "## iniciando o projeto nodeJs com express",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,5 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1"
-  }
+  },
+  "keywords": []
 }
