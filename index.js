@@ -1,5 +1,5 @@
 // Importa a função get clubes do service.js
-import {getClubes} from './service.js';
+import {ClubesService} from './service.js';
 
 // Importa o módulo Express
 import express from 'express';
@@ -8,14 +8,15 @@ import express from 'express';
 const app = express();
 
 // Define a porta do servidor
-const PORT = 3000;
+const PORT = 3001;
+const service = new ClubesService();
 
 // Middleware para processar JSON no corpo das requisições
 app.use(express.json());
 
 // Endpoint pra listar todos clubes
-app.get('/futebol/clube', (req, res) => {
-    res.json(getClubes());
+app.get('/', async (req, res) => {
+    res.json(await service.getClubes());
 });
 
 // Endpoint pra listar um clube pelo id
